@@ -1,0 +1,111 @@
+// app.use((req,res,next)=>{
+//     console.log("Middleware one has run!");
+//     next();
+// });
+
+// app.use((req,res,next)=>{
+//     if(!req.session.username){
+//         return res.redirect('/login');
+//     }
+//     next();
+// })
+
+// app.listen(port, ()=>{
+//     console.log(`Server is running at http://localhost:${port}`)
+// })
+
+// const express = require('express');
+// const bodyParser = require('body-parser')
+// const fetch = require('node-fetch');
+// require('./db/mongoose')
+// const Tweets = require('./models/Tweet')
+
+// const router = express.Router()
+
+// router.use(bodyParser.urlencoded({ extended: true }))
+
+// router.get('/tweets', (req, res) => {
+//     Tweets.find({}, (err ))})          
+
+//   .post('/tweet', (req, res) => {
+//       let tweet = new Tweets                 
+//       tweet.text = req.body.tweet
+//       tweet.author = req.body.author
+//       tweet.save((err, doc) => {
+//           if (!err) {
+//               res.send(doc);
+//           } else {
+//               console.log('Error in Saving tweet into the database')
+//               res.status(500).send()
+//           }
+//       })
+//   })
+
+//   module.exports = router;
+
+
+//   // return `
+    //     <form action="https://www.google.com" method="post">
+    //         <label for="username">Username:</label>
+    //         <input type="text" id="username" name="username"><br><br>
+    //         <label for="password">Password:</label>
+    //         <input type="password" id="password" name="password"><br><br>
+    //         <input type="submit" value="Login">
+    //     </form>
+    // `
+    // simulate a login by setting a session variable and sending back a response
+    // req.session.username = 'Nancy'; 
+
+
+
+
+
+
+
+
+///--------------------------------------
+
+
+require('dotenv').config()
+// console.log(process.env) //remove this after you've confirmed it is working
+// console.log("Hello nancy");
+const express = require('express')
+// import express from "express";
+
+const app = express()
+//math.api, Math.random use -  most powerfull
+const port = 4000
+// const port = 3000; port pe listen
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+});
+
+app.get('/twitter', (req, res) => {
+    res.send("hiteshdotcom")
+    // console.log("Hit the twitter route")
+});
+
+app.get('/login', () => {
+    res.send("<h1>Please login on this port 4000</h1>")
+});
+
+
+
+app.listen(process.env.PORT, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
